@@ -2,7 +2,7 @@
 property:
   nvhpc.version: 21.3
   nvhpc.arch: Linux_x86_64
-  nvhpc.path: /io/nvhpc_root
+  nvhpc.path: /opt/nvidia/hpc_sdk
 
 env:
   PATH=${nvhpc.path}/${nvhpc.arch}/${nvhpc.version}/compilers/bin:${PATH}
@@ -20,10 +20,10 @@ compiler:
 file:
   - type: c:S
     archiver: ar -cr
-    compiler: pgcc -acc -ta=tesla:managed -Minfo=accel 
+    compiler: pgcc -acc -ta=tesla:managed -Minfo=accel
     linker: pgcc -acc
   - type: cpp:cxx:cc
     archiver: ar -cr
-    compiler: pgc++ -acc -ta=tesla:managed -Minfo=accel # -std=c++17 -fPIC 
+    compiler: pgc++ -acc -ta=tesla:managed -Minfo=accel # -std=c++17 -fPIC
     linker: pgc++ -acc
-    
+

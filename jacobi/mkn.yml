@@ -1,0 +1,4 @@
+
+name: jacobi
+main: jacobi.c
+src:  laplace2d.parallel.c
